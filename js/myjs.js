@@ -70,7 +70,7 @@ var poq = {
 
 	justshow: function(json){
 		$("div").append(json);
-	}
+	},
 
 	upload: function(json){
 		$('#uploadBt').click(function() {
@@ -104,22 +104,23 @@ var poq = {
 }
 
 //Invoked once the main HTML DOM is ready
-$(document).ready(function()
+/*$(document).ready(function()
 {
-   // alert("The paragraph was clicked.");
-	//poq.loadPage();
+	
+   	//poq.loadPage();
 	//poq.getDatabase();
-});
+});*/
 
-$('#uploadBt').click(function() {
-	poq.showexample();
-});
+/*$('#uploadBt').click(function() {
+	alert("The paragraph was clicked.");
+	//poq.showexample();
+});*/
 
 
 
 // convert xml format to json format
 function xmlToJson(xml) {
-	
+	//alert("get in");
 	// Create the return object
 	var obj = {};
 
@@ -155,3 +156,11 @@ function xmlToJson(xml) {
 	}
 	return obj;
 };
+
+function show_content(){
+	//alert("Value:    " + $("#xml_input").val());
+	var xmlContent = $("#xml_input").val();
+	//var jsonResult = xmlToJson(xmlContent);
+	$("#show_json").html(xmlContent);
+}
+
